@@ -1,0 +1,30 @@
+.iconContainer {
+    background: #000 none repeat scroll 0 0;
+    border-radius: 100%;
+    color: #fff;
+    float: left;
+    font-size: 10px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 25px;
+}
+
+
+.superIndicator {
+    background: #e31c79 none repeat scroll 0 0;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 10px;
+    height: 25px;
+    line-height: 25px;
+    position: absolute;
+    text-align: center;
+    text-indent: 0;
+    top: 4px;
+    width: 25px;
+    z-index: 20;
+}
+
