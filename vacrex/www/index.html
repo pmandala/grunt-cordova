@@ -142,7 +142,8 @@
 
         <div data-role="footer" data-position="fixed" >
             <div style="text-align:center">
-            <a href="#vehiclemake" id="btn-addvehicle" data-role="button" class="ui-btn ui-btn-b ui-corner-all ui-btn-icon-left ui-icon-plus" style="width: 80%;" >Add Vehicle</a>
+            <a href="#serviceTypes" data-role="button" class="ui-btn ui-btn-b ui-corner-all ui-btn-icon-left ui-icon-calendar">Appointments</a>
+            <a href="#vehiclemake" data-role="button" class="ui-btn ui-btn-b ui-corner-all ui-btn-icon-left ui-icon-plus">Add Vehicle</a>
             </div>
         </div><!-- /footer -->
 
@@ -151,7 +152,7 @@
             <ul data-role="listview">
                 <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
 
-                <li data-icon="calendar"><a href="#appointments">Appointments</a></li>
+                <li data-icon="calendar"><a href="#serviceTypes">Appointments</a></li>
                 <li data-icon="star"><a href="#remainders">Reminders</a></li>
                 <li data-icon="clock"><a href="#repairs">Repairs Estimation</a></li>
                 <li data-icon="tag"><a href="#coupons">Coupons</a></li>
@@ -189,7 +190,7 @@
     <div data-role="page" id="vehiclemake" >
         <div data-role="header" data-position="fixed">
             <h1>Select Make</h1>
-            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Cancel</a>
+            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Home</a>
         </div><!-- /header -->
         <div data-role="content">
             <ul data-role="listview" data-autodividers="true" data-inset="true" data-filter="true">
@@ -277,7 +278,7 @@
         <div data-role="header" data-position="fixed">
             <h1>Enter Details</h1>
             <a href="#vehicleyear" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Year</a>
-            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check">Add</a>
+            <a href="#dashboard" class="ui-btn ui-btn-b ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check">Add</a>
         </div><!-- /header -->
         <div data-role="content">
             <label for="txt-make">Make</label>
@@ -308,7 +309,7 @@
         <div data-role="header" data-position="fixed">
             <h1>Update Details</h1>
             <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Cancel</a>
-            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check">Update</a>
+            <a href="#dashboard" class="ui-btn ui-btn-b ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check">Update</a>
         </div><!-- /header -->
         <div data-role="content">
             <label for="txt-Odometer">Odometer</label>
@@ -330,7 +331,7 @@
     <div id="coupons" data-role="page">
         <div data-role="header" data-position="fixed">
             <h1>Available Coupons</h1>
-            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Back</a>
+            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Home</a>
         </div><!-- /header -->
         <div data-role="content">
             <ul data-role="listview" data-inset="true">
@@ -368,12 +369,17 @@
     <div id="remainders" data-role="page">
         <div data-role="header" data-position="fixed">
             <h1>Reminders</h1>
-            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Back</a>
+            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Home</a>
         </div><!-- /header -->
         <div data-role="content">
             <ul data-role="listview" data-inset="true">
-            <li><h2>Reminder Name</h2>
-            <p>Date and time</p></a></li>
+                <li data-role="list-divider">Friday, April 8, 2016</li>
+                <li>
+                <h2>Auto Shop</h2>
+                <p><strong>Service</strong></p>
+                <p>Oil Change, Minor Service</p>
+                    <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                </li>
             </ul>
         </div><!-- /content -->
     </div><!-- /page -->
@@ -383,20 +389,43 @@
 
 
 
-    <!-- APPOINTMENTS PAGE -->
-    <div id="appointments" data-role="page">
+    <!-- SERVICE TYPES  PAGE -->
+    <div id="serviceTypes" data-role="page">
         <div data-role="header" data-position="fixed">
-            <h1>Appointments</h1>
-            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Back</a>
+            <h1>Service Types</h1>
+            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Home</a>
+            <a href="#servicecenter" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check">Next</a>
+        </div><!-- /header -->
+        <div data-role="content">
+            <fieldset data-role="controlgroup">
+                <input name="checkbox-21a" id="checkbox-21a" checked="" type="checkbox">
+                <label for="checkbox-21a">Oil Change</label>
+                <input name="checkbox-22a" id="checkbox-22a" type="checkbox">
+                <label for="checkbox-22a">Tire Rotation</label>
+                <input name="checkbox-33a" id="checkbox-33a" type="checkbox">
+                <label for="checkbox-33a">Brake Pad Change</label>
+                <input name="checkbox-44a" id="checkbox-44a" type="checkbox">
+                <label for="checkbox-44a">Minor Service</label>
+            </fieldset>
+        </div><!-- /content -->
+    </div><!-- /page -->
+
+
+
+    <!-- SERVICE CENTERES  PAGE -->
+    <div id="servicecenter" data-role="page">
+        <div data-role="header" data-position="fixed">
+            <h1>Service Centers</h1>
+            <a href="#serviceTypes" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Back</a>
         </div><!-- /header -->
         <div data-role="content">
             <input name="zipcode" id="search" value="" placeholder="Enter Zipcode..." type="search">
             <ul data-role="listview" data-inset="true">
             <li><a href="#confirmappointments">
-            <h2>Shop Name</h2>
+            <h2>Service Center Name</h2>
             <p>Address</p></a></li>
             <li><a href="#confirmappointments">
-            <h2>Shop Name</h2>
+            <h2>Service Center Name</h2>
             <p>Address</p></a></li>
             </ul>
         </div><!-- /content -->
@@ -411,15 +440,15 @@
     <div id="confirmappointments" data-role="page">
         <div data-role="header" data-position="fixed">
             <h1>Confirm</h1>
-            <a href="#appointments" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Back</a>
-            <a href="#dashboard" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check">Confirm</a>
+            <a href="#servicecenter" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-back">Back</a>
+            <a href="#dashboard" class="ui-btn ui-btn-b ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check">Confirm</a>
         </div><!-- /header -->
         <div data-role="content">
             <label for="txt-apt-date">Appoinment Date</label>
             <input name="txt-apt-date" id="txt-apt-date" data-role="date" type="text" class="datePicker">
 
             <fieldset data-role="controlgroup">
-                <legend>Time</legend>
+                <legend>Time Slot</legend>
                 <input name="checkbox-1" id="checkbox-1a" checked="" type="radio">
                 <label for="checkbox-1a">7-12 AM</label>
                 <input name="checkbox-1" id="checkbox-2a" type="radio">

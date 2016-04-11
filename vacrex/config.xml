@@ -9,33 +9,13 @@
     <preference name="AndroidPersistentFileLocation" value="Internal"/>
     <content src="plugins/cordova-plugin-chrome-apps-bootstrap/chromeapp.html"/>
     <preference name="android-minSdkVersion" value="14"/>
-    
     <platform name="android">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     </platform>
     <platform name="ios">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     </platform>
-    
     <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect"/>
     <preference name="xwalkMode" value="embedded"/>
     <preference name="xwalkMultipleApk" value="true"/>
+    
+    
 <access origin="*"/></widget>
